@@ -1,0 +1,2 @@
+1 - Testes de unidades são escritos sob a perspectiva do programador, já funcionais são escritos sob a perspectiva do usuário.
+2 - Testes de unidade testam uma unidade do sistema, como uma função, já funcionais testam toda uma funcionalidade, que pode utilizar várias "unidades".
