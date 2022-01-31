@@ -20,10 +20,7 @@ class HomePageTest(TestCase):
     self.assertTrue(html.strip().endswith('</html>'))
 
     self.assertTemplateUsed(response, 'home.html') 
-  
-  def test_only_saves_items_when_necessary(self):
-    self.client.get('/')
-    self.assertEqual(Item.objects.count(), 0)
+
 
 class ItemModelTest(TestCase):
   def test_saving_and_retrieving_items(self):
@@ -58,4 +55,3 @@ class NewListTest(TestCase):
   def test_redirects_after_POST(self):
     response = self.client.post('/lists/new', data={'item_text': 'A new list item'})
     self.assertRedirects(response, '/lists/the-only-list-in-the-world/')  
-    
